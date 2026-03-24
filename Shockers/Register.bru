@@ -1,0 +1,28 @@
+meta {
+  name: Register
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/1/shockers
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "rfId": 0,
+    "device": "00000000-0000-0000-0000-000000000000",
+    "model": "CaiXianlin"
+  }
+}
+
+docs {
+  Register a new shocker. Models: CaiXianlin, Petrainer, Petrainer998DR, PetSafe. rfId is the RF identifier on the shocker device.
+}

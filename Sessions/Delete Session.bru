@@ -1,0 +1,19 @@
+meta {
+  name: Delete Session
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/1/sessions/:sessionId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  sessionId:
+}
+
+docs {
+  Delete (revoke) a specific login session by ID.
+}

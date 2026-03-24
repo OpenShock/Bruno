@@ -1,0 +1,19 @@
+meta {
+  name: Remove Username Blacklist
+  type: http
+  seq: 15
+}
+
+delete {
+  url: {{baseUrl}}/1/admin/blacklist/usernames/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id:
+}
+
+docs {
+  Remove a username pattern from the blacklist. Requires admin role.
+}

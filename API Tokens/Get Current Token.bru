@@ -1,0 +1,15 @@
+meta {
+  name: Get Current Token
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/1/tokens/self
+  body: none
+  auth: inherit
+}
+
+docs {
+  Get information about the API token currently being used to authenticate this request. Only works when authenticated via API token (not session cookie).
+}

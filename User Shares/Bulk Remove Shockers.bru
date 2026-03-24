@@ -1,0 +1,29 @@
+meta {
+  name: Bulk Remove Shockers
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{baseUrl}}/2/shares/user/:userId/shockers
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  [
+    "00000000-0000-0000-0000-000000000000"
+  ]
+}
+
+docs {
+  Remove multiple shocker shares with a specific user. Returns affected record count.
+}

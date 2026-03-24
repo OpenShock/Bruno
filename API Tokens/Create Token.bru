@@ -1,0 +1,28 @@
+meta {
+  name: Create Token
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/1/tokens
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "permissions": [
+      "shockers.use"
+    ]
+  }
+}
+
+docs {
+  Create a new API token with the specified name and permissions. Available permissions: shockers.use, shockers.edit, devices.edit, devices.auth.
+}

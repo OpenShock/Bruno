@@ -1,0 +1,15 @@
+meta {
+  name: List Own
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/own
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all shockers belonging to the authenticated user.
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get Pair Code
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/1/devices/:deviceId/pair
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Get the current pair code for a hub. Used to pair a physical device with the account.
+}

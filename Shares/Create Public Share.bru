@@ -1,0 +1,25 @@
+meta {
+  name: Create Public Share
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/1/shares/links
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}
+
+docs {
+  Create a new public share link. Shockers can then be added to this share.
+}

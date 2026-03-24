@@ -1,0 +1,15 @@
+meta {
+  name: List Webhooks
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/1/admin/webhooks
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all registered webhooks. Requires admin role.
+}

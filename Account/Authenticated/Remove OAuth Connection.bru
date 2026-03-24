@@ -1,0 +1,19 @@
+meta {
+  name: Remove OAuth Connection
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/1/account/connections/:provider
+  body: none
+  auth: inherit
+}
+
+params:path {
+  provider:
+}
+
+docs {
+  Remove an OAuth provider connection from the authenticated user's account.
+}

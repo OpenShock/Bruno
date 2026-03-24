@@ -1,0 +1,23 @@
+meta {
+  name: Deactivate User
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}/1/admin/users/:userId/deactivate
+  body: none
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+params:query {
+  ~deleteLater:
+}
+
+docs {
+  Deactivate a user account. Optionally schedule for deletion with deleteLater=true. Requires admin role.
+}

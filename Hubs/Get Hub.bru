@@ -1,0 +1,19 @@
+meta {
+  name: Get Hub
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/1/devices/:deviceId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Get details of a specific hub by ID.
+}

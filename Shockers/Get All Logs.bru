@@ -1,0 +1,20 @@
+meta {
+  name: Get All Logs
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/logs
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~offset:
+  ~limit:
+}
+
+docs {
+  Get control logs across all shockers owned by the authenticated user. Supports pagination.
+}

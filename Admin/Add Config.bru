@@ -1,0 +1,26 @@
+meta {
+  name: Add Config
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/1/admin/config
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "value": ""
+  }
+}
+
+docs {
+  Add a new configuration item. Requires admin role.
+}

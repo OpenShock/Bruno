@@ -1,0 +1,19 @@
+meta {
+  name: Regenerate Token
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/1/devices/:deviceId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Regenerate the authentication token for a hub. The old token is immediately invalidated.
+}

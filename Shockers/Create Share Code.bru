@@ -1,0 +1,38 @@
+meta {
+  name: Create Share Code
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/1/shockers/:shockerId/shares
+  body: json
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "permissions": {
+      "vibrate": true,
+      "sound": true,
+      "shock": false,
+      "live": false
+    },
+    "limits": {
+      "intensity": 100,
+      "duration": 30000
+    }
+  }
+}
+
+docs {
+  Create a share code for a shocker with specific permissions and limits. The code can be redeemed by another user.
+}

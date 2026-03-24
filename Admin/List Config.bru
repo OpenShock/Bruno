@@ -1,0 +1,15 @@
+meta {
+  name: List Config
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/1/admin/config
+  body: none
+  auth: inherit
+}
+
+docs {
+  Get all configuration items. Requires admin role.
+}

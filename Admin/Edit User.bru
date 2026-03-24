@@ -1,0 +1,30 @@
+meta {
+  name: Edit User
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/1/admin/users/:userId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "email": ""
+  }
+}
+
+docs {
+  Edit a user's name or email. Requires admin role.
+}

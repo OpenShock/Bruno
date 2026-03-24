@@ -1,0 +1,21 @@
+meta {
+  name: List Hubs
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/1/devices
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: OpenShockToken
+  value: {{API_TOKEN}}
+  placement: header
+}
+
+docs {
+  List all hubs for the current user (V1). Deprecated, use GET /2/devices instead.
+}

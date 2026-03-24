@@ -1,0 +1,32 @@
+meta {
+  name: Edit Shocker
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/1/shockers/:shockerId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "rfId": 0,
+    "device": "00000000-0000-0000-0000-000000000000",
+    "model": "CaiXianlin"
+  }
+}
+
+docs {
+  Update a shocker's name, RF ID, device assignment, or model.
+}

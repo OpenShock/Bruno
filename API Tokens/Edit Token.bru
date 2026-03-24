@@ -1,0 +1,32 @@
+meta {
+  name: Edit Token
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/1/tokens/:tokenId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  tokenId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "permissions": [
+      "shockers.use"
+    ]
+  }
+}
+
+docs {
+  Edit the name or permissions of an existing API token.
+}

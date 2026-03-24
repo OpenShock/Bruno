@@ -1,0 +1,32 @@
+meta {
+  name: Bulk Pause Shockers
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/2/shares/user/:userId/shockers/pause
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "shockers": [
+      "00000000-0000-0000-0000-000000000000"
+    ],
+    "pause": true
+  }
+}
+
+docs {
+  Pause or unpause multiple shockers shared with/by a specific user. Returns affected record count and pause state bitfield.
+}

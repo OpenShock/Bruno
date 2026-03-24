@@ -1,0 +1,15 @@
+meta {
+  name: Logout
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/1/account/logout
+  body: none
+  auth: inherit
+}
+
+docs {
+  Log out the current session and invalidate the session cookie.
+}

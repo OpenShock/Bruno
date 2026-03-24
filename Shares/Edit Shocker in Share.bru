@@ -1,0 +1,39 @@
+meta {
+  name: Edit Shocker in Share
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/1/shares/links/:publicShareId/:shockerId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  publicShareId:
+  shockerId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "permissions": {
+      "vibrate": true,
+      "sound": true,
+      "shock": false,
+      "live": false
+    },
+    "limits": {
+      "intensity": 100,
+      "duration": 30000
+    }
+  }
+}
+
+docs {
+  Edit the permissions and limits of a shocker within a public share link.
+}

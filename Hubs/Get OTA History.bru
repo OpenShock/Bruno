@@ -1,0 +1,19 @@
+meta {
+  name: Get OTA History
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/1/devices/:deviceId/ota
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Get the OTA (over-the-air) firmware update history for a hub.
+}

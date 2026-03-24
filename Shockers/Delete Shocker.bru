@@ -1,0 +1,19 @@
+meta {
+  name: Delete Shocker
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/1/shockers/:shockerId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+docs {
+  Permanently remove a shocker. This also removes all shares and logs.
+}

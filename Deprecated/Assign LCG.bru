@@ -1,0 +1,21 @@
+meta {
+  name: Assign LCG
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/1/device/assignLCG
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: DeviceToken
+  value: {{HUB_TOKEN}}
+  placement: header
+}
+
+docs {
+  Get the best LCG node for a hub (V1). Deprecated, use GET /2/device/assignLCG instead.
+}

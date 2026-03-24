@@ -1,0 +1,40 @@
+meta {
+  name: Control Shockers
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/1/shockers/control
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: OpenShockToken
+  value: {{API_TOKEN}}
+  placement: header
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "shocks": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "type": "Stop",
+        "intensity": 0,
+        "duration": 300,
+        "exclusive": false
+      }
+    ],
+    "customName": ""
+  }
+}
+
+docs {
+  Send control commands to shockers (V1). Deprecated, use POST /2/shockers/control instead.
+}

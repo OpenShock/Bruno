@@ -1,0 +1,15 @@
+meta {
+  name: List Sessions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/1/sessions
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all active login sessions for the authenticated user.
+}

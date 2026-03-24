@@ -1,0 +1,27 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/2/account/login
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "usernameOrEmail": "",
+    "password": "",
+    "turnstileResponse": ""
+  }
+}
+
+docs {
+  Authenticate a user. Returns account info and sets session cookie. Requires Turnstile captcha token. (V2)
+}

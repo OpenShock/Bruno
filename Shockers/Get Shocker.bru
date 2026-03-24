@@ -1,0 +1,19 @@
+meta {
+  name: Get Shocker
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/:shockerId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+docs {
+  Get detailed information about a specific shocker.
+}

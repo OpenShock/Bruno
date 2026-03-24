@@ -1,0 +1,41 @@
+meta {
+  name: Bulk Update Shockers
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{baseUrl}}/2/shares/user/:userId/shockers
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "permissions": {
+      "vibrate": true,
+      "sound": true,
+      "shock": false,
+      "live": false
+    },
+    "limits": {
+      "intensity": 100,
+      "duration": 30000
+    },
+    "shockers": [
+      "00000000-0000-0000-0000-000000000000"
+    ]
+  }
+}
+
+docs {
+  Bulk update permissions and limits for multiple shocker shares with a specific user.
+}

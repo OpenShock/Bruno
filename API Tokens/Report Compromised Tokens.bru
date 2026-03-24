@@ -1,0 +1,27 @@
+meta {
+  name: Report Compromised Tokens
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/1/tokens/report
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "tokens": [
+      ""
+    ]
+  }
+}
+
+docs {
+  Report potentially compromised API tokens for deletion. Used by automated scanning services.
+}

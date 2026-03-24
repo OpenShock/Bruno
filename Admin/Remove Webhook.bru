@@ -1,0 +1,19 @@
+meta {
+  name: Remove Webhook
+  type: http
+  seq: 18
+}
+
+delete {
+  url: {{baseUrl}}/1/admin/webhooks/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id:
+}
+
+docs {
+  Remove a registered webhook. Requires admin role.
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Get By Name
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/1/users/by-name/:username
+  body: none
+  auth: inherit
+}
+
+params:path {
+  username:
+}
+
+docs {
+  Look up a user by their username. Returns basic public profile info.
+}

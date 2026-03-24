@@ -1,0 +1,15 @@
+meta {
+  name: Get Online Devices
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/1/admin/monitoring/onlineDevices
+  body: none
+  auth: inherit
+}
+
+docs {
+  Get all currently online devices with connection details. Requires admin role.
+}

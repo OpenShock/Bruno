@@ -1,0 +1,20 @@
+meta {
+  name: Remove Shocker from Share
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/1/shares/links/:publicShareId/:shockerId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  publicShareId:
+  shockerId:
+}
+
+docs {
+  Remove a shocker from a public share link.
+}

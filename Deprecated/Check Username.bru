@@ -1,0 +1,25 @@
+meta {
+  name: Check Username
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/1/account/username/check
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "username": ""
+  }
+}
+
+docs {
+  Check username availability (V1). Deprecated, use POST /2/account/username/check instead.
+}

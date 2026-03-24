@@ -1,0 +1,15 @@
+meta {
+  name: List Incoming Invites
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/2/shares/user/invites/incoming
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all pending share invites received by the authenticated user.
+}

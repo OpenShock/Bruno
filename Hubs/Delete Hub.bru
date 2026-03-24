@@ -1,0 +1,19 @@
+meta {
+  name: Delete Hub
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/1/devices/:deviceId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Remove a hub from the authenticated user's account. This also removes all associated shockers.
+}

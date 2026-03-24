@@ -1,0 +1,19 @@
+meta {
+  name: Get Shares
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/:shockerId/shares
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+docs {
+  Get all user shares for a specific shocker.
+}

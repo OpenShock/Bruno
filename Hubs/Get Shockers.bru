@@ -1,0 +1,19 @@
+meta {
+  name: Get Shockers
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/1/devices/:deviceId/shockers
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Get all shockers registered to a specific hub.
+}

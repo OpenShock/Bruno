@@ -1,0 +1,19 @@
+meta {
+  name: Delete Public Share
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/1/shares/links/:publicShareId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  publicShareId:
+}
+
+docs {
+  Delete a public share link. All shockers in the share become inaccessible via this link.
+}

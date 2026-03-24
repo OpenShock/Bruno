@@ -1,0 +1,25 @@
+meta {
+  name: Check Username
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/2/account/username/check
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "username": ""
+  }
+}
+
+docs {
+  Check if a username is available for registration. Returns availability status and any validation errors. (V2)
+}

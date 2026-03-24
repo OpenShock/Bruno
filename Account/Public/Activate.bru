@@ -1,0 +1,19 @@
+meta {
+  name: Activate
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/1/account/activate
+  body: none
+  auth: inherit
+}
+
+params:query {
+  token:
+}
+
+docs {
+  Activate a user account using the activation token from the signup email.
+}

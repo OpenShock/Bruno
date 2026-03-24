@@ -1,0 +1,19 @@
+meta {
+  name: Remove Email Blacklist
+  type: http
+  seq: 12
+}
+
+delete {
+  url: {{baseUrl}}/1/admin/blacklist/emailProviders/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id:
+}
+
+docs {
+  Remove an email provider from the blacklist. Requires admin role.
+}

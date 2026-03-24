@@ -1,0 +1,30 @@
+meta {
+  name: Pause Shocker in Share
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/1/shares/links/:publicShareId/:shockerId/pause
+  body: json
+  auth: inherit
+}
+
+params:path {
+  publicShareId:
+  shockerId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "pause": true
+  }
+}
+
+docs {
+  Pause or unpause a shocker within a public share link.
+}

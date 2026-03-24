@@ -1,0 +1,15 @@
+meta {
+  name: List OAuth Connections
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/1/account/connections
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all OAuth provider connections (Discord, Google, Twitter) linked to the authenticated user's account.
+}

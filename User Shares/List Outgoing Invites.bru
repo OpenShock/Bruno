@@ -1,0 +1,15 @@
+meta {
+  name: List Outgoing Invites
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/2/shares/user/invites/outgoing
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all pending share invites sent by the authenticated user.
+}

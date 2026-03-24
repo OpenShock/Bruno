@@ -1,0 +1,25 @@
+meta {
+  name: Add Username Blacklist
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/1/admin/blacklist/usernames
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "pattern": ""
+  }
+}
+
+docs {
+  Add a username pattern to the blacklist. Prevents users from registering with matching usernames. Requires admin role.
+}

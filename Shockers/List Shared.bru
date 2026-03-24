@@ -1,0 +1,15 @@
+meta {
+  name: List Shared
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/shared
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all shockers shared with the authenticated user by other users.
+}

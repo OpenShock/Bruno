@@ -1,0 +1,15 @@
+meta {
+  name: List Public Shares
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/1/shares/links
+  body: none
+  auth: inherit
+}
+
+docs {
+  Get all public share links created by the authenticated user.
+}

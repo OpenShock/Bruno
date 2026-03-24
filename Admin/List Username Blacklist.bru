@@ -1,0 +1,19 @@
+meta {
+  name: List Username Blacklist
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/1/admin/blacklist/usernames
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~match:
+}
+
+docs {
+  List blacklisted usernames. Optionally filter by match pattern. Requires admin role.
+}

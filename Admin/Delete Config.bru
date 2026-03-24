@@ -1,0 +1,19 @@
+meta {
+  name: Delete Config
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/1/admin/config/:name
+  body: none
+  auth: inherit
+}
+
+params:path {
+  name:
+}
+
+docs {
+  Delete a configuration item by name. Requires admin role.
+}

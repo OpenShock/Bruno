@@ -1,0 +1,19 @@
+meta {
+  name: Assign LCG
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/2/device/assignLCG
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~version:
+}
+
+docs {
+  Get the best suited Live Control Gateway node for this hub to connect to. Returns host, port, path, and country. (V2)
+}

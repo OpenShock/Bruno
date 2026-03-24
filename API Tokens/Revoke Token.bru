@@ -1,0 +1,19 @@
+meta {
+  name: Revoke Token
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/1/tokens/:tokenId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  tokenId:
+}
+
+docs {
+  Permanently revoke an API token. This cannot be undone.
+}

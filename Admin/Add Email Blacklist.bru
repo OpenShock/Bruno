@@ -1,0 +1,25 @@
+meta {
+  name: Add Email Blacklist
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/1/admin/blacklist/emailProviders
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "domain": ""
+  }
+}
+
+docs {
+  Add an email provider domain to the blacklist. Users cannot register with blacklisted email providers. Requires admin role.
+}

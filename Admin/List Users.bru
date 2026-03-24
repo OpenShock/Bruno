@@ -1,0 +1,22 @@
+meta {
+  name: List Users
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/1/admin/users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~$filter:
+  ~$orderby:
+  ~$offset:
+  ~$limit:
+}
+
+docs {
+  Get all users with pagination and filtering. Supports OData-style query parameters. Requires admin role.
+}

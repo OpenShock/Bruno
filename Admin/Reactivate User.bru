@@ -1,0 +1,19 @@
+meta {
+  name: Reactivate User
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/1/admin/users/:userId/reactivate
+  body: none
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+docs {
+  Reactivate a previously deactivated user account. Requires admin role.
+}

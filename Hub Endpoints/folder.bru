@@ -1,0 +1,14 @@
+meta {
+  name: Hub Endpoints
+  seq: 7
+}
+
+auth {
+  mode: apikey
+}
+
+auth:apikey {
+  key: DeviceToken
+  value: {{HUB_TOKEN}}
+  placement: header
+}

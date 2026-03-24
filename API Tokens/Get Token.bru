@@ -1,0 +1,19 @@
+meta {
+  name: Get Token
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/1/tokens/:tokenId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  tokenId:
+}
+
+docs {
+  Get details of a specific API token by ID.
+}

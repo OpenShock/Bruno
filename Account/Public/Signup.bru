@@ -1,0 +1,28 @@
+meta {
+  name: Signup
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/2/account/signup
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "username": "",
+    "password": "",
+    "email": "user@example.com",
+    "turnstileResponse": ""
+  }
+}
+
+docs {
+  Register a new user account. Requires Turnstile captcha token. (V2)
+}

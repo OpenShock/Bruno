@@ -1,0 +1,29 @@
+meta {
+  name: Pause
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/1/shockers/:shockerId/pause
+  body: json
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "pause": true
+  }
+}
+
+docs {
+  Pause or unpause a shocker. When paused, all control commands are rejected.
+}

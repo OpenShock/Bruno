@@ -1,0 +1,19 @@
+meta {
+  name: Delete User
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{baseUrl}}/1/admin/users/:userId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  userId:
+}
+
+docs {
+  Permanently delete a user account. Requires admin role.
+}

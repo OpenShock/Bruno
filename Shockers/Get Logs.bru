@@ -1,0 +1,24 @@
+meta {
+  name: Get Logs
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/:shockerId/logs
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+params:query {
+  ~offset:
+  ~limit:
+}
+
+docs {
+  Get the control log history for a specific shocker. Supports pagination via offset and limit.
+}

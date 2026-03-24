@@ -1,0 +1,20 @@
+meta {
+  name: Add Shocker to Share
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/1/shares/links/:publicShareId/:shockerId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  publicShareId:
+  shockerId:
+}
+
+docs {
+  Add a shocker to an existing public share link.
+}

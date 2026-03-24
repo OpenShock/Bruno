@@ -1,0 +1,39 @@
+meta {
+  name: Update Share
+  type: http
+  seq: 14
+}
+
+patch {
+  url: {{baseUrl}}/1/shockers/:shockerId/shares/:sharedWithUserId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+  sharedWithUserId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "permissions": {
+      "vibrate": true,
+      "sound": true,
+      "shock": false,
+      "live": false
+    },
+    "limits": {
+      "intensity": 100,
+      "duration": 30000
+    }
+  }
+}
+
+docs {
+  Update the permissions and limits of an existing share for a shocker.
+}

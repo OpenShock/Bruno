@@ -1,0 +1,19 @@
+meta {
+  name: Accept Invite
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/2/shares/user/invites/incoming/:inviteId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  inviteId:
+}
+
+docs {
+  Accept a share invite and add the shared shockers to your account.
+}

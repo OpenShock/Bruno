@@ -1,0 +1,19 @@
+meta {
+  name: List Share Codes
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/1/shockers/:shockerId/shareCodes
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shockerId:
+}
+
+docs {
+  List all active share codes for a specific shocker.
+}

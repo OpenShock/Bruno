@@ -1,0 +1,27 @@
+meta {
+  name: Add Webhook
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/1/admin/webhooks
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "url": "https://example.com/webhook",
+    "events": []
+  }
+}
+
+docs {
+  Register a new webhook endpoint. Requires admin role.
+}

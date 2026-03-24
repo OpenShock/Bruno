@@ -1,0 +1,19 @@
+meta {
+  name: Delete Share Code
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{baseUrl}}/1/shares/code/:shareCodeId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  shareCodeId:
+}
+
+docs {
+  Delete a share code. Already-linked shares are not affected.
+}

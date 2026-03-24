@@ -1,0 +1,15 @@
+meta {
+  name: List Tokens
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/1/tokens
+  body: none
+  auth: inherit
+}
+
+docs {
+  List all API tokens for the authenticated user.
+}

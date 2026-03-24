@@ -1,0 +1,26 @@
+meta {
+  name: Update Config
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/1/admin/config
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "value": ""
+  }
+}
+
+docs {
+  Update an existing configuration item. Requires admin role.
+}

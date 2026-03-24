@@ -1,0 +1,17 @@
+meta {
+  name: Get Backend Info
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/1
+  body: none
+  auth: inherit
+}
+
+docs {
+  Returns server version, commit hash, current time, frontend URL,
+  short link URL, Turnstile site key, available OAuth providers,
+  and whether the caller is authenticated.
+}

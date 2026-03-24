@@ -1,0 +1,15 @@
+meta {
+  name: Get Current Session
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/1/sessions/self
+  body: none
+  auth: inherit
+}
+
+docs {
+  Get information about the current session used to access this endpoint.
+}

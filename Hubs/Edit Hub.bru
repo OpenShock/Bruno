@@ -1,0 +1,29 @@
+meta {
+  name: Edit Hub
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/1/devices/:deviceId
+  body: json
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}
+
+docs {
+  Update the name of a hub.
+}

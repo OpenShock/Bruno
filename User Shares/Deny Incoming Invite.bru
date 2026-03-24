@@ -1,0 +1,19 @@
+meta {
+  name: Deny Incoming Invite
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/2/shares/user/invites/incoming/:inviteId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  inviteId:
+}
+
+docs {
+  Deny (reject) a pending incoming share invite.
+}

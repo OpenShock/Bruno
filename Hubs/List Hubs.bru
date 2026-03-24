@@ -1,0 +1,15 @@
+meta {
+  name: List Hubs
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/2/devices
+  body: none
+  auth: inherit
+}
+
+docs {
+  Get all hubs (devices) for the authenticated user. (V2)
+}

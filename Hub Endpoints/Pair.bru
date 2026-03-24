@@ -1,0 +1,19 @@
+meta {
+  name: Pair
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/1/device/pair/:pairCode
+  body: none
+  auth: inherit
+}
+
+params:path {
+  pairCode:
+}
+
+docs {
+  Pair this hub with an account using a pair code displayed in the web UI.
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/1/account/login
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "",
+    "password": ""
+  }
+}
+
+docs {
+  Authenticate a user (V1). Deprecated, use POST /2/account/login instead.
+}

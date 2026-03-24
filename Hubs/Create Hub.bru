@@ -1,0 +1,25 @@
+meta {
+  name: Create Hub
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/2/devices
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}
+
+docs {
+  Create a new hub (device) for the authenticated user. Returns the new device ID. (V2)
+}

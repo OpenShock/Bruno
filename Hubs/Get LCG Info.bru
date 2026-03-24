@@ -1,0 +1,19 @@
+meta {
+  name: Get LCG Info
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/1/devices/:deviceId/lcg
+  body: none
+  auth: inherit
+}
+
+params:path {
+  deviceId:
+}
+
+docs {
+  Get Live Control Gateway info for a hub, if it is online and connected to an LCG node.
+}

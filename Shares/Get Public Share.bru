@@ -1,0 +1,19 @@
+meta {
+  name: Get Public Share
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/1/public/shares/links/:publicShareId
+  body: none
+  auth: none
+}
+
+params:path {
+  publicShareId:
+}
+
+docs {
+  Get information about a public share link. This endpoint is publicly accessible without authentication.
+}
